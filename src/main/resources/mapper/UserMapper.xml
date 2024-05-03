@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.ObserverPattern.mapper.UserMapper">
+
+    <insert id="insertUser">
+        INSERT INTO observer (username)
+        VALUES (#{username})
+    </insert>
+
+    <insert id="insertEvent1">
+        INSERT INTO event1 (UUID, TimeStamp, Payload)
+        VALUES (#{uuid}, #{timestamp}, #{payload})
+    </insert>
+
+    <insert id="insertEvent2">
+        INSERT INTO event2 (UUID, TimeStamp, Payload)
+        VALUES (#{uuid}, #{timestamp}, #{payload})
+    </insert>
+
+    <insert id="insertEvent3">
+        INSERT INTO event3 (UUID, TimeStamp, Payload)
+        VALUES (#{uuid}, #{timestamp}, #{payload})
+    </insert>
+
+    <select id="getUsers" resultType="com.example.ObserverPattern.dto.Users">
+        SELECT username
+        FROM public.observer
+    </select>
+
+</mapper>
