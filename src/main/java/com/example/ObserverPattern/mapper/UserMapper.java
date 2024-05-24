@@ -1,7 +1,6 @@
 package com.example.ObserverPattern.mapper;
 
 import com.example.ObserverPattern.dto.User;
-import com.example.ObserverPattern.dto.Users;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
